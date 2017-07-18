@@ -8,7 +8,7 @@ using SQLiteNetExtensions.Attributes;
 
 namespace ControLab.Models
 {
-    public partial class Usuarios
+    public partial class LogLab
     {
         [PrimaryKey, AutoIncrement]
         public long? Id { get; set; }
