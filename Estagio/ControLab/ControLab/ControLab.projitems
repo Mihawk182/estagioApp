@@ -17,6 +17,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Usuarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\GenericReadOnlyRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\GenericRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\Interfaces\IGenericReadOnlyRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\Interfaces\IGenericRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\Interfaces\ITransactionScope.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\TransactionScope.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\UnitOfWork.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\BaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
@@ -29,10 +38,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Repositories\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewMoldes\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
   </ItemGroup>
 </Project>
