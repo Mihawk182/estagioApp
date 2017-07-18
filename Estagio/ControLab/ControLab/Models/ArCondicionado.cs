@@ -13,8 +13,12 @@ namespace ControLab.Models
         [PrimaryKey, AutoIncrement]
         public long? Id { get; set; }
 
-        public long? IdSala { get; set; }
-
         public string Nome { get; set; }
+
+        [ForeignKey(typeof(Sala))]
+        public int IdSala { get; set; }
+
+        [ManyToOne]
+        public Sala Sala { get; set; }
     }
 }

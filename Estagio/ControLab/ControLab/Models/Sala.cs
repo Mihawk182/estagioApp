@@ -17,6 +17,12 @@ namespace ControLab.Models
 
         public int Qtd_Ar { get; set; }
 
-        public int Interruptores { get; set; }
+        public int Qtd_Interruptores { get; set; }
+
+        [OneToMany]
+        public List<LogLab> Logs { get; set; }
+        public List<DataSala> Datas { get; set; }
+        public List<ArCondicionado> Ares { get; set; }
+        public List<Interruptor> Interruptores { get; set; }
     }
 }

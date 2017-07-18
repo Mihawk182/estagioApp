@@ -18,10 +18,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\ArCondicionado.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DataSala.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Interruptores.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Interruptor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LogLab.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Sala.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Usuarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Usuario.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\GenericReadOnlyRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\GenericRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\Interfaces\IGenericReadOnlyRepository.cs" />

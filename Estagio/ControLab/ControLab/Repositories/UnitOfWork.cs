@@ -10,18 +10,18 @@ namespace ControLab.Repositories
         {
             DB = sqlite;
 
-            _UsuariosRepository = new GenericRepository<Usuarios, long>(DB, DBLocker);
+            _UsuarioRepository = new GenericRepository<Usuario, long>(DB, DBLocker);
             _DataSalaRepository = new GenericRepository<DataSala, long>(DB, DBLocker);
-            _InterruptoresRepository = new GenericRepository<Interruptores, long>(DB, DBLocker);
+            _InterruptorRepository = new GenericRepository<Interruptor, long>(DB, DBLocker);
             _LogLabRepository = new GenericRepository<LogLab, long>(DB, DBLocker);
             _SalaRepository = new GenericRepository<Sala, long>(DB, DBLocker);
             _ArCondicionadoRepository = new GenericRepository<ArCondicionado, long>(DB, DBLocker);
 
             lock (DBLocker)
             {
-                DB.CreateTable<Usuarios>();
+                DB.CreateTable<Usuario>();
                 DB.CreateTable<DataSala>();
-                DB.CreateTable<Interruptores>();
+                DB.CreateTable<Interruptor>();
                 DB.CreateTable<LogLab>();
                 DB.CreateTable<Sala>();
                 DB.CreateTable<ArCondicionado>();
@@ -31,13 +31,13 @@ namespace ControLab.Repositories
         static object DBLocker = new object();
         readonly SQLiteConnection DB;
 
-        #region Usuarios
-        IGenericRepository<Usuarios, long> _UsuariosRepository;
-        public IGenericRepository<Usuarios, long> UsuariosRepository
+        #region Usuario
+        IGenericRepository<Usuario, long> _UsuarioRepository;
+        public IGenericRepository<Usuario, long> UsuarioRepository
         {
             get
             {
-                return _UsuariosRepository;
+                return _UsuarioRepository;
             }
         }
         #endregion
@@ -53,13 +53,13 @@ namespace ControLab.Repositories
         }
         #endregion
 
-        #region Interruptores
-        IGenericRepository<Interruptores, long> _InterruptoresRepository;
-        public IGenericRepository<Interruptores, long> InterruptoresRepository
+        #region Interruptor
+        IGenericRepository<Interruptor, long> _InterruptorRepository;
+        public IGenericRepository<Interruptor, long> InterruptorRepository
         {
             get
             {
-                return _InterruptoresRepository;
+                return _InterruptorRepository;
             }
         }
         #endregion

@@ -8,13 +8,18 @@ using SQLiteNetExtensions.Attributes;
 
 namespace ControLab.Models
 {
-    public partial class Interruptores
+    public partial class Usuario
     {
         [PrimaryKey, AutoIncrement]
         public long? Id { get; set; }
 
-        public long? IdSala { get; set; }
+        public string Login { get; set; }
 
-        public string Nome { get; set; }
+        public string Senha { get; set; }
+
+        public int Privilegio { get; set; }
+
+        [OneToMany]
+        public List<LogLab> Logs { get; set; }
     }
 }
