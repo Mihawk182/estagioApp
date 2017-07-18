@@ -13,5 +13,12 @@ namespace ControLab
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            String text =  MainEntry.Text;
+
+            MainLabel.Text = "Hello " + text;
+        }
+    }
 }
