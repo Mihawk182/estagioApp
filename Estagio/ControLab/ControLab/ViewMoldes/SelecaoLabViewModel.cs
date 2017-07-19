@@ -13,23 +13,7 @@ namespace ControLab.ViewMoldes
     {
         public SelecaoLabViewModel(INavigation navigation) : base(navigation)
         {
-        }
-
-        Command _AvancarLabCommand;
-        public Command AvancarLabCommand
-        {
-            get { return _AvancarLabCommand ?? (_AvancarLabCommand = new Command(async () => await ExecuteAvancarLabCommand())); }
-        }
-
-        async Task ExecuteAvancarLabCommand()
-        {
-            if (!IsBusy)
-            {
-                IsBusy = true;
-                await Navigation.PushAsync(new SelecaoLab());
-                IsBusy = false;
-            }
-        }
+        }        
     }
 
 }

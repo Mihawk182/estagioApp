@@ -5,9 +5,10 @@
              x:Class="ControLab.Pages.SelecaoLab"
              BackgroundColor="Gray">
 
-    <StackLayout
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand">
+    <StackLayout VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand">
+
+        <ListView x:Name="LabListView" VerticalOptions="FillAndExpand"/>
 
         <Button Text="VOLTAR"/>
 
