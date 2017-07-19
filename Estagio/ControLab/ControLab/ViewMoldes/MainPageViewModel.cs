@@ -11,8 +11,8 @@ namespace ControLab.ViewMoldes
 {
     public class MainPageViewModel : BaseViewModel
     {
-        public MainPageViewModel(INavigation navigation) : base(navigation){
-
+        public MainPageViewModel(INavigation navigation) : base(navigation)
+        {
         }
 
         Command _AvancarCommand;

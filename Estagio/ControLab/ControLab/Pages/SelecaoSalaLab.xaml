@@ -9,15 +9,12 @@
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand">
 
-        <Button Clicked="LabButton_Clicked" Text="LABORATORIOS"
+        <Button Text="LABORATORIOS"
                 FontSize="Medium"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/>
+                Command="{Binding AvancarLabCommand}"/>
 
-        <Button Clicked="SalasButton_Clicked" Text="SALAS"
-                FontSize="Medium"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/>-->
+        <Button Text="SALAS"
+                FontSize="Medium"/>
         
         <Button Text="SAIR"
                 Command="{Binding VoltaCommand}"/>

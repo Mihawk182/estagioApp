@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ControLab.Pages.SelecaoLab">
+		         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		         xmlns:resources="clr-namespace:ControLab.Resources;assembly=ControLab"
+             x:Class="ControLab.Pages.SelecaoLab"
+             BackgroundColor="Gray">
 
     <StackLayout
                VerticalOptions="CenterAndExpand"
