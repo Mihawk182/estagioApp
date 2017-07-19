@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControLab.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,14 @@ namespace ControLab
 			InitializeComponent();
 		}
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void LoginButton_Clicked(object sender, EventArgs e)
         {
-            String text =  MainEntry.Text;
+            await Navigation.PushAsync(new SelecaoSalaLab());
+        }
 
-            MainLabel.Text = "Hello " + text;
+        private void EsqueceuButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,7 +13,7 @@ namespace ControLab
 		{
 			InitializeComponent();
 
-			MainPage = new ControLab.MainPage();
+			MainPage = new NavigationPage( new ControLab.MainPage());
 		}
 
 		protected override void OnStart ()

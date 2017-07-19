@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControLab.Pages.SelecaoSalaLab"
+             BackgroundColor="Gray">
+    
+    <StackLayout BackgroundColor="Gray"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand">
+
+        <Button Clicked="LabButton_Clicked" Text="LABORATORIOS"
+                FontSize="Medium"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Button Clicked="SalasButton_Clicked" Text="SALAS"
+                FontSize="Medium"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        
+        <Button Clicked="SairButton_Clicked" Text="SAIR"
+                FontSize="Micro"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        
+    </StackLayout>
+</ContentPage>
