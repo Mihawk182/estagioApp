@@ -9,7 +9,7 @@
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand">
 
-        <!--<Button Clicked="LabButton_Clicked" Text="LABORATORIOS"
+        <Button Clicked="LabButton_Clicked" Text="LABORATORIOS"
                 FontSize="Medium"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
