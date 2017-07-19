@@ -15,15 +15,12 @@
 
         <Button Text="LOGIN"
                 Command="{Binding AvancarCommand}"/>
-        
-        <!--<Button Clicked="EsqueceuButton_Clicked" Text="Esqueceu sua senha?"
-                FontSize="Micro"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/>-->
 
-        <Label x:Name="MainLabel"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"/>
+        <Button Text="Esqueceu sua senha?"
+                FontSize="Micro"
+                Command="{Binding AvancarRecuperaCommand}"/>
+
+        <Label x:Name="MainLabel" VerticalOptions="Center" HorizontalOptions="Center"/>
 
     </StackLayout>
 	

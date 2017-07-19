@@ -22,6 +22,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\RecuperaEmail.xaml.cs">
+      <DependentUpon>RecuperaEmail.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\SelecaoLab.xaml.cs">
       <DependentUpon>SelecaoLab.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -40,6 +44,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\UnitOfWork.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\RecuperaEmailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\SelecaoLabViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\SelecaoSalaLabViewModel.cs" />
   </ItemGroup>
@@ -65,6 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\SelecaoLab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\RecuperaEmail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -9,19 +9,19 @@ using ControLab.Pages;
 
 namespace ControLab.ViewMoldes
 {
-    public class SelecaoLabViewModel : BaseViewModel
+    class RecuperaEmailViewModel : BaseViewModel
     {
-        public SelecaoLabViewModel(INavigation navigation) : base(navigation)
+        public RecuperaEmailViewModel(INavigation navigation) : base(navigation)
         {
         }
 
-        Command _VoltaLabCommand;
-        public Command VoltaLabCommand
+        Command _VoltaMainCommand;
+        public Command VoltaMainCommand
         {
-            get { return _VoltaLabCommand ?? (_VoltaLabCommand = new Command(async () => await ExecuteVoltaLabCommand())); }
+            get { return _VoltaMainCommand ?? (_VoltaMainCommand = new Command(async () => await ExecuteVoltaMainCommand())); }
         }
 
-        async Task ExecuteVoltaLabCommand()
+        async Task ExecuteVoltaMainCommand()
         {
             if (!IsBusy)
             {
@@ -29,7 +29,6 @@ namespace ControLab.ViewMoldes
                 await Navigation.PopAsync();
                 IsBusy = false;
             }
-        }        
+        }
     }
-
 }

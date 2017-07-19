@@ -10,7 +10,8 @@
 
         <ListView x:Name="LabListView" VerticalOptions="FillAndExpand"/>
 
-        <Button Text="VOLTAR"/>
+        <Button Text="VOLTAR"
+                Command="{Binding VoltaLabCommand}"/>
 
     </StackLayout>
     
