@@ -1,28 +1,16 @@
-﻿using ControLab.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
+using ControLab.ViewMoldes;
 
-namespace ControLab
+namespace ControLab.Pages
 {
 	public partial class MainPage : ContentPage
 	{
 		public MainPage()
 		{
-			InitializeComponent();
+            BindingContext = new MainPageViewModel(Navigation);
+            InitializeComponent();
 		}
-
-        private async void LoginButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SelecaoSalaLab());
-        }
-
-        private void EsqueceuButton_Clicked(object sender, EventArgs e)
-        {
-
-        }
     }
 }

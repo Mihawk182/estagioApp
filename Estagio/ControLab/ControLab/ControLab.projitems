@@ -35,6 +35,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\TransactionScope.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\UnitOfWork.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\SelecaoSalaLabViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">

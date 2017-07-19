@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ControLab"
-             x:Class="ControLab.MainPage"
+		         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		         xmlns:resources="clr-namespace:ControLab.Resources;assembly=ControLab"
+             x:Class="ControLab.Pages.MainPage"
              BackgroundColor="Gray">
 
-    <StackLayout BackgroundColor="Gray"
+    <StackLayout
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand">
 
@@ -13,15 +13,13 @@
 
         <Entry x:Name="SenhaEntry"/>
 
-        <Button Clicked="LoginButton_Clicked" Text="LOGIN"
-                FontSize="Medium"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/>
+        <Button Text="LOGIN"
+                Command="{Binding AvancarCommand}"/>
         
-        <Button Clicked="EsqueceuButton_Clicked" Text="Esqueceu sua senha?"
+        <!--<Button Clicked="EsqueceuButton_Clicked" Text="Esqueceu sua senha?"
                 FontSize="Micro"
                 VerticalOptions="Center"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"/>-->
 
         <Label x:Name="MainLabel"
                VerticalOptions="Center"
