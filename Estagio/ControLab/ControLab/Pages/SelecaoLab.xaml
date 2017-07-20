@@ -8,11 +8,43 @@
     <StackLayout VerticalOptions="CenterAndExpand"
                  HorizontalOptions="CenterAndExpand">
 
-        <ListView x:Name="LabListView" VerticalOptions="FillAndExpand"/>
+        <ListView
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			HasUnevenRows="true"
+			SeparatorVisibility="None"
+			ItemsSource="{Binding Salas}"
+			ItemTapped="Handle_ItemTapped">
 
-        <Button Text="AvancaTEST"
-                Command="{Binding AvancarConfigGeralCommand}"/>
+            <x:Arguments>
+                <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+            </x:Arguments>
 
+            <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid
+                        Margin="4"
+                        ColumnSpacing="20"
+                        BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                            <Label 
+                            HorizontalOptions="StartAndExpand"
+							FontAttributes="Bold"
+							FontSize="Large"
+							Text="{Binding Nome}"/>
+                        </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
         <Button Text="VOLTAR"
                 Command="{Binding VoltaLabCommand}"/>
 

@@ -13,6 +13,22 @@ namespace ControLab.ViewMoldes
     {
         public SelecaoLabViewModel(INavigation navigation) : base(navigation)
         {
+            Salas.Add(new Sala { Nome = "LAB 1" });
+            Salas.Add(new Sala { Nome = "LAB 2" });
+        }
+
+        ObservableCollection<Sala> _Salas = new ObservableCollection<Sala>();
+        public ObservableCollection<Sala> Salas
+        {
+            get
+            {
+                return _Salas;
+            }
+            set
+            {
+                _Salas = value;
+                SetPropertyChanged(nameof(Salas));
+            }
         }
 
         Command _AvancarConfigGeralCommand;

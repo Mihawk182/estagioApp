@@ -11,11 +11,20 @@ namespace ControLab.Pages
         {
             BindingContext = new SelecaoLabViewModel(Navigation);
             InitializeComponent();
+        }
 
-            LabListView.ItemsSource = new List<String>
+        void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        {
+            if (e == null)
             {
-                "Laboratório de Hardware","Laboratório I","Laboratório II","Laboratório III","Laboratório IV","Laboratório V"
-            };
+                return; // has been set to null, do not 'process' tapped event 
+            }
+
+            if (((SelecaoLabViewModel)BindingContext).AvancarConfigGeralCommand.CanExecute(null))
+            {
+                ((SelecaoLabViewModel)BindingContext).AvancarConfigGeralCommand.Execute(null);
+            }
+            ((ListView)sender).SelectedItem = null; // de-select the row
         }
     }
 }
