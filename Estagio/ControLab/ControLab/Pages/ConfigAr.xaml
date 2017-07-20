@@ -12,7 +12,11 @@
                 FontSize="Large"/>
             <Button Text="DESLIGA" 
                 FontSize="Large"/>
-            
+
+            <Switch HorizontalOptions="Center"
+                    Toggled="Switch_Toggled"/>
+
+            <Label Text="Aplicar a todos!"/>
             
             
             
