@@ -22,7 +22,7 @@ namespace ControLab.Pages
 
             if (((SelecaoLabViewModel)BindingContext).AvancarConfigGeralCommand.CanExecute(null))
             {
-                ((SelecaoLabViewModel)BindingContext).AvancarConfigGeralCommand.Execute(null);
+                ((SelecaoLabViewModel)BindingContext).AvancarConfigGeralCommand.Execute(((ListView)sender).SelectedItem);
             }
             ((ListView)sender).SelectedItem = null; // de-select the row
         }

@@ -34,15 +34,22 @@ namespace ControLab.ViewMoldes
         Command _AvancarConfigGeralCommand;
         public Command AvancarConfigGeralCommand
         {
-            get { return _AvancarConfigGeralCommand ?? (_AvancarConfigGeralCommand = new Command(async () => await ExecuteAvancarConfigGeralCommand())); }
+            get { return _AvancarConfigGeralCommand ?? (_AvancarConfigGeralCommand = new Command<Sala>(async (value) => await ExecuteAvancarConfigGeralCommand(value))); }
         }
 
-        async Task ExecuteAvancarConfigGeralCommand()
+        async Task ExecuteAvancarConfigGeralCommand(Sala value)
         {
             if (!IsBusy)
             {
                 IsBusy = true;
-                await Navigation.PushAsync(new ConfigGeral());
+                if (value.Nome == "LAB 1")
+                {
+                    await Navigation.PushAsync(new ConfigGeral());
+                }
+                else
+                {
+                    await Navigation.PushAsync(new MainPage());
+                }           
                 IsBusy = false;
             }
         }
