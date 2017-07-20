@@ -10,6 +10,9 @@
 
         <ListView x:Name="LabListView" VerticalOptions="FillAndExpand"/>
 
+        <Button Text="AvancaTEST"
+                Command="{Binding AvancarConfigGeralCommand}"/>
+
         <Button Text="VOLTAR"
                 Command="{Binding VoltaLabCommand}"/>
 
