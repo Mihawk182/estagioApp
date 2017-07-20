@@ -30,5 +30,21 @@ namespace ControLab.ViewMoldes
                 IsBusy = false;
             }
         }
+
+        Command _AvancarLabCommand;
+        public Command AvancarLabCommand
+        {
+            get { return _AvancarLabCommand ?? (_AvancarLabCommand = new Command(async () => await ExecuteAvancarLabCommand())); }
+        }
+
+        async Task ExecuteAvancarLabCommand()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+                await Navigation.PushAsync(new SelecaoLab());
+                IsBusy = false;
+            }
+        }
     }
 }

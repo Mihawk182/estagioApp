@@ -30,5 +30,21 @@ namespace ControLab.ViewMoldes
                 IsBusy = false;
             }
         }
+
+        Command _AvancarRecuperaCommand;
+        public Command AvancarRecuperaCommand
+        {
+            get { return _AvancarRecuperaCommand ?? (_AvancarRecuperaCommand = new Command(async () => await ExecuteAvancarRecuperaCommand())); }
+        }
+
+        async Task ExecuteAvancarRecuperaCommand()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+                await Navigation.PushAsync(new RecuperaEmail());
+                IsBusy = false;
+            }
+        }
     }
 }

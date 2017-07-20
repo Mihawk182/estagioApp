@@ -15,21 +15,37 @@ namespace ControLab.ViewMoldes
         {
         }
 
-        Command _AvancarLabCommand;
-        public Command AvancarLabCommand
+        Command _AvancarConfigGeralCommand;
+        public Command AvancarConfigGeralCommand
         {
-            get { return _AvancarLabCommand ?? (_AvancarLabCommand = new Command(async () => await ExecuteAvancarLabCommand())); }
+            get { return _AvancarConfigGeralCommand ?? (_AvancarConfigGeralCommand = new Command(async () => await ExecuteAvancarConfigGeralCommand())); }
         }
 
-        async Task ExecuteAvancarLabCommand()
+        async Task ExecuteAvancarConfigGeralCommand()
         {
             if (!IsBusy)
             {
                 IsBusy = true;
-                await Navigation.PushAsync(new SelecaoLab());
+                await Navigation.PushAsync(new ConfigGeral());
                 IsBusy = false;
             }
         }
+
+        Command _VoltaLabCommand;
+        public Command VoltaLabCommand
+        {
+            get { return _VoltaLabCommand ?? (_VoltaLabCommand = new Command(async () => await ExecuteVoltaLabCommand())); }
+        }
+
+        async Task ExecuteVoltaLabCommand()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+                await Navigation.PopAsync();
+                IsBusy = false;
+            }
+        }        
     }
 
 }

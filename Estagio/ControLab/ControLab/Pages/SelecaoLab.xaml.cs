@@ -11,6 +11,11 @@ namespace ControLab.Pages
         {
             BindingContext = new SelecaoLabViewModel(Navigation);
             InitializeComponent();
+
+            LabListView.ItemsSource = new List<String>
+            {
+                "Laboratório de Hardware","Laboratório I","Laboratório II","Laboratório III","Laboratório IV","Laboratório V"
+            };
         }
     }
 }
