@@ -21,12 +21,12 @@
             </x:Arguments>
 
             <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid
-                        Margin="4"
-                        ColumnSpacing="20"
-                        BackgroundColor="Transparent">
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Margin="4"
+                            ColumnSpacing="20"
+                            BackgroundColor="Transparent">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
@@ -41,10 +41,11 @@
 							FontSize="Large"
 							Text="{Binding Nome}"/>
                         </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
         <Button Text="VOLTAR"
                 Command="{Binding VoltaLabCommand}"/>
 

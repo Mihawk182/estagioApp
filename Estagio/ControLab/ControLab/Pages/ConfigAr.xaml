@@ -8,7 +8,18 @@
 
     <ContentPage Title="AR-1">
         <StackLayout>
-            <Label Text="Welcome to AR-1!"/>
+            <Button Text="LIGA" 
+                FontSize="Large"/>
+            <Button Text="DESLIGA" 
+                FontSize="Large"/>
+            
+            
+            
+            
+            <Button Text="VOLTA" 
+                FontSize="Large"/>
+            <Button Text="CONFIRMA" 
+                FontSize="Large"/>
         </StackLayout>
     </ContentPage>
     
