@@ -19,6 +19,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\LogLab.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Sala.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Usuario.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ConfigAr.xaml.cs">
+      <DependentUpon>ConfigAr.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ConfigGeral.xaml.cs">
       <DependentUpon>ConfigGeral.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -47,6 +51,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\TransactionScope.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repositories\UnitOfWork.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\ConfigArViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\ConfigGeralViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\MainPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewMoldes\RecuperaEmailViewModel.cs" />
@@ -65,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\SelecaoSalaLab.xaml">
@@ -90,5 +94,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ConfigAr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\ic_ac_unit_black_24dp.png" />
   </ItemGroup>
 </Project>

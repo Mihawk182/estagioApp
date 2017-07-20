@@ -6,6 +6,14 @@
              BackgroundColor="Gray">
     
     <StackLayout>
+        <Button Text="Lamp I" 
+                FontSize="Micro"/>
+        <Button Text="Lamp II" 
+                FontSize="Micro"/>
+        <Button Text="Lamp III" 
+                FontSize="Micro"/>
+        <Button Text="ALamp IV" 
+                FontSize="Micro"/>
         
         <Label x:Name="TheTemp" Text="Temperatura"/>
         <Label x:Name="DisplayTemp" Text="20ºC"/>
@@ -15,7 +23,8 @@
         <Label x:Name="DisplayLumi" Text="ProgressBar"/>
         
         <Button Text="AR" 
-                FontSize="Large"/>
+                FontSize="Large"
+                Command="{Binding AvancarConfigArCommand}"/>
 
         <Button Text="VOLTAR" 
                 FontSize="Micro" 

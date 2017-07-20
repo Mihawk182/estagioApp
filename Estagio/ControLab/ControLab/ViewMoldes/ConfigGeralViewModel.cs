@@ -15,6 +15,22 @@ namespace ControLab.ViewMoldes
         {
         }
 
+        Command _AvancarConfigArCommand;
+        public Command AvancarConfigArCommand
+        {
+            get { return _AvancarConfigArCommand ?? (_AvancarConfigArCommand = new Command(async () => await ExecuteAvancarConfigArCommand())); }
+        }
+
+        async Task ExecuteAvancarConfigArCommand()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+                await Navigation.PushAsync(new ConfigAr());
+                IsBusy = false;
+            }
+        }
+
         Command _VoltaSelecaoLabCommand;
         public Command VoltaSelecaoLabCommand
         {
