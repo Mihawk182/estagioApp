@@ -7,7 +7,8 @@
     
     <StackLayout>
         <Button Text="Lamp I" 
-                FontSize="Micro"/>
+                FontSize="Micro"
+                Command="{Binding LigarLampadaI}"/>
         <Button Text="Lamp II" 
                 FontSize="Micro"/>
         <Button Text="Lamp III" 
