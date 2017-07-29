@@ -11,6 +11,7 @@ namespace ControLab.Pages
 		{
             BindingContext = new ConfigGeralViewModel(Navigation);
             InitializeComponent();
+            
         }
 	}
 }

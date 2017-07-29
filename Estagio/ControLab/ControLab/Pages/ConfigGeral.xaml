@@ -15,9 +15,19 @@
                 FontSize="Micro"/>
         <Button Text="ALamp IV" 
                 FontSize="Micro"/>
-        
-        <Label x:Name="TheTemp" Text="Temperatura"/>
-        <Label x:Name="DisplayTemp" Text="20ºC"/>
+
+
+        <Label x:Name="DisplayTemp" Text="Temperatura"/>
+
+        <Button Text="Temp" 
+                FontSize="Micro"
+                Command="{Binding PegaTemp}"/>
+
+        <Label
+            Text = "{Binding nomeEntry}"
+            FontSize="Micro"/>
+
+
         <Label x:Name="TheUmid" Text="Umidade"/>
         <Label x:Name="DisplayUmid" Text="30%"/>
         <Label x:Name="TheLumi" Text="Luminosidade"/>
