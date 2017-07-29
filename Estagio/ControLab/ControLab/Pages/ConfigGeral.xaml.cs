@@ -13,5 +13,14 @@ namespace ControLab.Pages
             InitializeComponent();
             
         }
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (((ConfigGeralViewModel)BindingContext).PegaTemp.CanExecute(null))
+            {
+                ((ConfigGeralViewModel)BindingContext).PegaTemp.Execute(null);
+            }
+        }
+    }
 }
