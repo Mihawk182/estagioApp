@@ -8,31 +8,44 @@
     <StackLayout>
         <Button Text="Lamp I" 
                 FontSize="Micro"
-                Command="{Binding LigarLampadaI}"/>
+                Command="{Binding LigarLampadaICommand}"/>
+        
         <Button Text="Lamp II" 
-                FontSize="Micro"/>
-        <Button Text="Lamp III" 
-                FontSize="Micro"/>
-        <Button Text="ALamp IV" 
-                FontSize="Micro"/>
-
-
-        <Label x:Name="DisplayTemp" Text="Temperatura"/>
-
-        <Button Text="Temp" 
                 FontSize="Micro"
-                Command="{Binding PegaTemp}"/>
+                Command="{Binding LigarLampadaIICommand}"/>
+        
+        <Button Text="Lamp III" 
+                FontSize="Micro"
+                Command="{Binding LigarLampadaIIICommand}"/>
+        
+        <Button Text="ALamp IV" 
+                FontSize="Micro"
+                Command="{Binding LigarLampadaIVCommand}"/>
+
+
+        <Label x:Name="DisplayTemp" 
+               Text="Temperatura"/>
 
         <Label
-            Text = "{Binding nomeEntry}"
+            Text = "{Binding TempEntryCommand}"
             FontSize="Micro"/>
 
 
-        <Label x:Name="TheUmid" Text="Umidade"/>
-        <Label x:Name="DisplayUmid" Text="30%"/>
-        <Label x:Name="TheLumi" Text="Luminosidade"/>
-        <Label x:Name="DisplayLumi" Text="ProgressBar"/>
+        <Label x:Name="TheUmid" 
+               Text="Umidade"/>
         
+        <Label x:Name="DisplayUmid" 
+               Text = "{Binding UmidEntryCommand}"/>
+        
+        <Label x:Name="TheLumi" Text="Luminosidade"/>
+
+        <ProgressBar x:Name="LumiProgressBar"
+                     Progress="{Binding LumiProgressBarCommand}"
+                     WidthRequest="300"
+                     HeightRequest="20"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+
         <Button Text="AR" 
                 FontSize="Large"
                 Command="{Binding AvancarConfigArCommand}"/>

@@ -17,9 +17,17 @@ namespace ControLab.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (((ConfigGeralViewModel)BindingContext).PegaTemp.CanExecute(null))
+            if (((ConfigGeralViewModel)BindingContext).PegaTempCommand.CanExecute(null))
             {
-                ((ConfigGeralViewModel)BindingContext).PegaTemp.Execute(null);
+                ((ConfigGeralViewModel)BindingContext).PegaTempCommand.Execute(null);
+            }
+            if (((ConfigGeralViewModel)BindingContext).PegaUmidCommand.CanExecute(null))
+            {
+                ((ConfigGeralViewModel)BindingContext).PegaUmidCommand.Execute(null);
+            }
+            if (((ConfigGeralViewModel)BindingContext).PegaLumiCommand.CanExecute(null))
+            {
+                ((ConfigGeralViewModel)BindingContext).PegaLumiCommand.Execute(null);
             }
         }
     }
