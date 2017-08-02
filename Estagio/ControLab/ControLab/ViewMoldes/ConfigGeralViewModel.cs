@@ -45,8 +45,8 @@ namespace ControLab.ViewMoldes
             }
         }
 
-        float _LumiProgressBarCommand = 0;
-        public float LumiProgressBarCommand
+        string _LumiProgressBarCommand = string.Empty;
+        public string LumiProgressBarCommand
         {
             get
             {
@@ -71,7 +71,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request =  HttpWebRequest.Create(string.Format(@"http://192.168.1.182/LigarLI"));
+                var request =  HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL1"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -97,7 +97,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://192.168.1.182/LigarLII"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL2"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -123,7 +123,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://192.168.1.182/LigarLIII"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL3"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -149,7 +149,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://192.168.1.182/LigarLIV"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL4"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -175,7 +175,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://192.168.1.182/temp"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Temperatura"));
                 request.ContentType = "application/json";
                 request.Method = "GET";
 
@@ -213,7 +213,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://192.168.1.182/Umid"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Umidade"));
                 request.ContentType = "application/json";
                 request.Method = "GET";
 
@@ -251,7 +251,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://192.168.1.182/Lumi"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Luminosidade"));
                 request.ContentType = "application/json";
                 request.Method = "GET";
 
@@ -268,8 +268,7 @@ namespace ControLab.ViewMoldes
                         }
                         else
                         {
-                            float LumiConvert = float.Parse(content);
-                            LumiProgressBarCommand = LumiConvert;
+                            LumiProgressBarCommand = content;
                         }
                     }
                 }
