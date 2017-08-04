@@ -5,44 +5,66 @@
             x:Class="ControLab.Pages.ConfigAr"
             BackgroundColor="Gray">
 
-
+    <!--==================================================================================-->
     <ContentPage Title="AR-1">
         <StackLayout>
+            
             <Button Text="LIGA" 
-                FontSize="Large"/>
+                    FontSize="Large"
+                    Command="{Binding LigarAR1Command}"/>
+            
             <Button Text="DESLIGA" 
-                FontSize="Large"/>
+                    FontSize="Large"
+                    Command="{Binding DesligarAR1Command}"/>
+
+            <Picker
+                    Grid.Row="3"
+                    Grid.ColumnSpan="18"
+                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+                <Picker.Items>
+                    <x:String>Selecione a Temperatura</x:String>
+                    <x:String>20ºC</x:String>
+                    <x:String>19ºC</x:String>
+                    <x:String>18ºC</x:String>
+                    <x:String>17ºC</x:String>
+                    <x:String>16ºC</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Aplicar a todos!"/>
 
             <Switch HorizontalOptions="Center"
                     Toggled="Switch_Toggled"/>
 
-            <Label Text="Aplicar a todos!"/>
-            
-            
-            
             <Button Text="VOLTA" 
-                FontSize="Large"/>
+                FontSize="Large"
+                    Command="{Binding VoltaConfigGeralCommand}"/>
+            
             <Button Text="CONFIRMA" 
-                FontSize="Large"/>
+                    FontSize="Large"
+                    Command="{Binding ConfirmaTempAr1Command}"/>
+            
         </StackLayout>
     </ContentPage>
     
+    <!--==================================================================================-->
     <ContentPage Title="AR-2" >
         <StackLayout>
             <Label Text="Welcome to AR-2!"/>
         </StackLayout>
     </ContentPage>
-
+    <!--==================================================================================-->
     <ContentPage Title="AR-3" >
         <StackLayout>
             <Label Text="Welcome to AR-3!"/>
         </StackLayout>
     </ContentPage>
-
+    <!--==================================================================================-->
     <ContentPage Title="AR-4" >
         <StackLayout>
             <Label Text="Welcome to AR-4!"/>
         </StackLayout>
     </ContentPage>
-
+    <!--==================================================================================-->
 </TabbedPage>

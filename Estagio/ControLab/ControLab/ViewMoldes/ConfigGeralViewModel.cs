@@ -182,19 +182,26 @@ namespace ControLab.ViewMoldes
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     if (response.StatusCode != HttpStatusCode.OK)
-                        Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                     {
-                        string content = reader.ReadToEnd();
-                        if (string.IsNullOrWhiteSpace(content))
+                        Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                         {
-                            Console.Out.WriteLine("Response contained empty body...");
-                        }
-                        else
-                        {
-                            TempEntryCommand = content;
+                            string content = reader.ReadToEnd();
+                            if (string.IsNullOrWhiteSpace(content))
+                            {
+                                Console.Out.WriteLine("Response contained empty body...");
+                            }
+                            else
+                            {
+                                TempEntryCommand = content;
+                            }
                         }
                     }
+                    else
+                    {
+                        TempEntryCommand = "Offline";
+                    }
+                        
                 }
 
                 IsBusy = false;
@@ -220,18 +227,24 @@ namespace ControLab.ViewMoldes
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     if (response.StatusCode != HttpStatusCode.OK)
-                        Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                     {
-                        string content = reader.ReadToEnd();
-                        if (string.IsNullOrWhiteSpace(content))
+                        Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                         {
-                            Console.Out.WriteLine("Response contained empty body...");
+                            string content = reader.ReadToEnd();
+                            if (string.IsNullOrWhiteSpace(content))
+                            {
+                                Console.Out.WriteLine("Response contained empty body...");
+                            }
+                            else
+                            {
+                                UmidEntryCommand = content;
+                            }
                         }
-                        else
-                        {
-                            UmidEntryCommand = content;
-                        }
+                    }
+                    else
+                    {
+                        UmidEntryCommand = "Offline";
                     }
                 }
 
@@ -258,24 +271,63 @@ namespace ControLab.ViewMoldes
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     if (response.StatusCode != HttpStatusCode.OK)
-                        Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                     {
-                        string content = reader.ReadToEnd();
-                        if (string.IsNullOrWhiteSpace(content))
+                        Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                         {
-                            Console.Out.WriteLine("Response contained empty body...");
+                            string content = reader.ReadToEnd();
+                            if (string.IsNullOrWhiteSpace(content))
+                            {
+                                Console.Out.WriteLine("Response contained empty body...");
+                            }
+                            else
+                            {
+                                LumiProgressBarCommand = content;
+                            }
                         }
-                        else
-                        {
-                            LumiProgressBarCommand = content;
-                        }
+                    }
+                    else
+                    {
+                        LumiProgressBarCommand = "0.0";
                     }
                 }
 
                 IsBusy = false;
             }
         }
+
+        //=================================
+        int _MostraSoma10 = 0;
+        public int MostraSoma10
+        {
+            get
+            {
+                return _MostraSoma10;
+            }
+            set
+            {
+                _MostraSoma10 = value;
+                SetPropertyChanged(nameof(MostraSoma10));
+            }
+        }
+
+        Command _Soma10;
+        public Command Soma10
+        {
+            get { return _Soma10 ?? (_Soma10 = new Command( () =>  ExecuteSoma10())); }
+        }
+
+        void ExecuteSoma10()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+                MostraSoma10 = MostraSoma10 + 10;
+                IsBusy = false;
+            }
+        }
+  
+        //=============================================
 
         Command _AvancarConfigArCommand;
         public Command AvancarConfigArCommand

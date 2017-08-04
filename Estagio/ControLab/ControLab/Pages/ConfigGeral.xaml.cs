@@ -17,7 +17,7 @@ namespace ControLab.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (((ConfigGeralViewModel)BindingContext).PegaTempCommand.CanExecute(null))
+           /* if (((ConfigGeralViewModel)BindingContext).PegaTempCommand.CanExecute(null))
             {
                 ((ConfigGeralViewModel)BindingContext).PegaTempCommand.Execute(null);
             }
@@ -28,7 +28,7 @@ namespace ControLab.Pages
             if (((ConfigGeralViewModel)BindingContext).PegaLumiCommand.CanExecute(null))
             {
                 ((ConfigGeralViewModel)BindingContext).PegaLumiCommand.Execute(null);
-            }
+            }*/
         }
     }
 }
