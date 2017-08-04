@@ -6,7 +6,7 @@
              BackgroundColor="Gray">
     
     <StackLayout>
-        <!--<Button Text="Lamp I" 
+        <Button Text="Lamp I" 
                 FontSize="Micro"
                 Command="{Binding LigarLampadaICommand}"/>
         
@@ -44,14 +44,14 @@
                      WidthRequest="300"
                      HeightRequest="20"
                      HorizontalOptions="Center"
-                     VerticalOptions="Center"/>-->
+                     VerticalOptions="Center"/>
 
-        <Button x:Name="BotaoSoma"
+        <!--<Button x:Name="BotaoSoma"
             Text="Soma"
             Command="{Binding Soma10 }"/>
         
         <Label x:Name="MostraSomaLabel"
-            Text = "{Binding MostraSoma10}"/>
+            Text = "{Binding MostraSoma10}"/>-->
 
         <Button Text="AR" 
                 FontSize="Large"

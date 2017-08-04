@@ -17,6 +17,20 @@ namespace ControLab.ViewMoldes
         {
         }
 
+        bool _ApplyToAll = false;
+        public bool ApplyToAll
+        {
+            get
+            {
+                return _ApplyToAll;
+            }
+            set
+            {
+                _ApplyToAll = value;
+                SetPropertyChanged(nameof(ApplyToAll));
+            }
+        }
+
         //=====LIGAR=================================================================================================================
         Command _LigarAR1Command;
         public Command LigarAR1Command
@@ -30,7 +44,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarAr1"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -39,8 +53,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteLigarAR2Command();
+                    ExecuteLigarAR3Command();
+                    ExecuteLigarAR4Command();
+                }
             }
         }
 
@@ -56,7 +76,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarAr2"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -65,8 +85,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteLigarAR1Command();
+                    ExecuteLigarAR3Command();
+                    ExecuteLigarAR4Command();
+                }
             }
         }
 
@@ -82,7 +108,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarAr3"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -91,8 +117,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteLigarAR1Command();
+                    ExecuteLigarAR2Command();
+                    ExecuteLigarAR4Command();
+                }
             }
         }
 
@@ -108,7 +140,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarAr4"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -117,8 +149,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteLigarAR1Command();
+                    ExecuteLigarAR2Command();
+                    ExecuteLigarAR3Command();
+                }
             }
         }
 
@@ -136,7 +174,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/DesligarAr1"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -145,8 +183,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteDesligarAR2Command();
+                    ExecuteDesligarAR3Command();
+                    ExecuteDesligarAR4Command();
+                }
             }
         }
 
@@ -162,7 +206,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/DesligarAr2"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -171,8 +215,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteDesligarAR1Command();
+                    ExecuteDesligarAR3Command();
+                    ExecuteDesligarAR4Command();
+                }
             }
         }
 
@@ -188,7 +238,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/DesligarAr3"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -197,8 +247,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteDesligarAR1Command();
+                    ExecuteDesligarAR2Command();
+                    ExecuteDesligarAR4Command();
+                }
             }
         }
 
@@ -214,7 +270,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/DesligarAr4"));
+                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -223,8 +279,14 @@ namespace ControLab.ViewMoldes
                     if (response.StatusCode != HttpStatusCode.OK)
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteDesligarAR1Command();
+                    ExecuteDesligarAR2Command();
+                    ExecuteDesligarAR3Command();
+                }
             }
         }
 
@@ -315,8 +377,14 @@ namespace ControLab.ViewMoldes
                             Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                     }
                 }
-
                 IsBusy = false;
+                if(ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteConfirmaTempAr2Command();
+                    ExecuteConfirmaTempAr3Command();
+                    ExecuteConfirmaTempAr4Command();
+                }
             }
         }
 
@@ -392,8 +460,14 @@ namespace ControLab.ViewMoldes
                             Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                     }
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteConfirmaTempAr1Command();
+                    ExecuteConfirmaTempAr3Command();
+                    ExecuteConfirmaTempAr4Command();
+                }
             }
         }
 
@@ -469,8 +543,14 @@ namespace ControLab.ViewMoldes
                             Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                     }
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteConfirmaTempAr1Command();
+                    ExecuteConfirmaTempAr2Command();
+                    ExecuteConfirmaTempAr4Command();
+                }
             }
         }
 
@@ -546,8 +626,14 @@ namespace ControLab.ViewMoldes
                             Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
                     }
                 }
-
                 IsBusy = false;
+                if (ApplyToAll == true)
+                {
+                    ApplyToAll = false;
+                    ExecuteConfirmaTempAr1Command();
+                    ExecuteConfirmaTempAr2Command();
+                    ExecuteConfirmaTempAr3Command();
+                }
             }
         }
 

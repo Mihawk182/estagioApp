@@ -8,6 +8,13 @@
     <!--==================================================================================-->
     <ContentPage Title="AR-1">
         <StackLayout>
+          
+            <Label Text="Aplicar a todos!"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"/>
+
+            <Switch HorizontalOptions="Center"
+                    IsToggled="{Binding ApplyToAll}"/>
             
             <Button Text="LIGA" 
                     FontSize="Large"
@@ -32,18 +39,13 @@
                 </Picker.Items>
             </Picker>
 
-            <Label Text="Aplicar a todos!"/>
-
-            <Switch HorizontalOptions="Center"
-                    Toggled="Switch_Toggled"/>
-
-            <Button Text="VOLTA" 
-                FontSize="Large"
-                    Command="{Binding VoltaConfigGeralCommand}"/>
-            
             <Button Text="CONFIRMA" 
                     FontSize="Large"
                     Command="{Binding ConfirmaTempAr1Command}"/>
+          
+            <Button Text="VOLTA" 
+                    FontSize="Large"
+                    Command="{Binding VoltaConfigGeralCommand}"/>
             
         </StackLayout>
     </ContentPage>

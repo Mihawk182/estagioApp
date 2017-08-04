@@ -182,28 +182,20 @@ namespace ControLab.ViewMoldes
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     if (response.StatusCode != HttpStatusCode.OK)
-                    {
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                    {
+                        string content = reader.ReadToEnd();
+                        if (string.IsNullOrWhiteSpace(content))
                         {
-                            string content = reader.ReadToEnd();
-                            if (string.IsNullOrWhiteSpace(content))
-                            {
-                                Console.Out.WriteLine("Response contained empty body...");
-                            }
-                            else
-                            {
-                                TempEntryCommand = content;
-                            }
+                            Console.Out.WriteLine("Response contained empty body...");
+                        }
+                        else
+                        {
+                            TempEntryCommand = content;
                         }
                     }
-                    else
-                    {
-                        TempEntryCommand = "Offline";
-                    }
-                        
                 }
-
                 IsBusy = false;
             }
         }
@@ -227,24 +219,18 @@ namespace ControLab.ViewMoldes
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     if (response.StatusCode != HttpStatusCode.OK)
-                    {
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                        {
-                            string content = reader.ReadToEnd();
-                            if (string.IsNullOrWhiteSpace(content))
-                            {
-                                Console.Out.WriteLine("Response contained empty body...");
-                            }
-                            else
-                            {
-                                UmidEntryCommand = content;
-                            }
-                        }
-                    }
-                    else
+                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                     {
-                        UmidEntryCommand = "Offline";
+                        string content = reader.ReadToEnd();
+                        if (string.IsNullOrWhiteSpace(content))
+                        {
+                            Console.Out.WriteLine("Response contained empty body...");
+                        }
+                        else
+                        {
+                            UmidEntryCommand = content;
+                        }
                     }
                 }
 
@@ -271,24 +257,18 @@ namespace ControLab.ViewMoldes
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     if (response.StatusCode != HttpStatusCode.OK)
-                    {
                         Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                        {
-                            string content = reader.ReadToEnd();
-                            if (string.IsNullOrWhiteSpace(content))
-                            {
-                                Console.Out.WriteLine("Response contained empty body...");
-                            }
-                            else
-                            {
-                                LumiProgressBarCommand = content;
-                            }
-                        }
-                    }
-                    else
+                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
                     {
-                        LumiProgressBarCommand = "0.0";
+                        string content = reader.ReadToEnd();
+                        if (string.IsNullOrWhiteSpace(content))
+                        {
+                            Console.Out.WriteLine("Response contained empty body...");
+                        }
+                        else
+                        {
+                            LumiProgressBarCommand = content;
+                        }
                     }
                 }
 
@@ -297,7 +277,7 @@ namespace ControLab.ViewMoldes
         }
 
         //=================================
-        int _MostraSoma10 = 0;
+        /*int _MostraSoma10 = 0;
         public int MostraSoma10
         {
             get
@@ -325,7 +305,7 @@ namespace ControLab.ViewMoldes
                 MostraSoma10 = MostraSoma10 + 10;
                 IsBusy = false;
             }
-        }
+        }*/
   
         //=============================================
 
