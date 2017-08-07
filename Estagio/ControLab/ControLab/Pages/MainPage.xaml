@@ -3,21 +3,31 @@
 		         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 		         xmlns:resources="clr-namespace:ControLab.Resources;assembly=ControLab"
              x:Class="ControLab.Pages.MainPage"
-             BackgroundColor="Gray">
+             BackgroundColor="#FFFFF7">
 
     <StackLayout
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand">
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="FillAndExpand">
 
-        <Entry x:Name="LoginEntry"/>
+        <Entry x:Name="LoginEntry"
+               Placeholder="Login"
+               Keyboard="Text"/>
 
-        <Entry x:Name="SenhaEntry"/>
+        <Entry x:Name="SenhaEntry"
+               Placeholder="Senha   "
+               Keyboard="Text"
+               IsPassword="true"/>
 
         <Button Text="LOGIN"
+                FontSize="Large"
+                TextColor="#FFFFF7"
+                BackgroundColor="#2f7dd6"
                 Command="{Binding AvancarCommand}"/>
 
         <Button Text="Esqueceu sua senha?"
-                FontSize="Micro"
+                FontSize="Large"
+                TextColor="#FFFFF7"
+                BackgroundColor="#2f7dd6"
                 Command="{Binding AvancarRecuperaCommand}"/>
 
         <Label x:Name="MainLabel" VerticalOptions="Center" HorizontalOptions="Center"/>

@@ -3,7 +3,7 @@
 		     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 		     xmlns:resources="clr-namespace:ControLab.Resources;assembly=ControLab"
              x:Class="ControLab.Pages.ConfigGeral"
-             BackgroundColor="Gray">
+             BackgroundColor="#FFFFF7">
     
     <StackLayout>
         <Button Text="Lamp I" 
