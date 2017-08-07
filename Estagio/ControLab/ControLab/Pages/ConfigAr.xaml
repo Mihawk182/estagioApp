@@ -53,19 +53,127 @@
     <!--==================================================================================-->
     <ContentPage Title="AR-2" >
         <StackLayout>
-            <Label Text="Welcome to AR-2!"/>
+            <Label Text="Aplicar a todos!"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"/>
+
+            <Switch HorizontalOptions="Center"
+                    IsToggled="{Binding ApplyToAll}"/>
+            
+            <Button Text="LIGA" 
+                    FontSize="Large"
+                    Command="{Binding LigarAR2Command}"/>
+            
+            <Button Text="DESLIGA" 
+                    FontSize="Large"
+                    Command="{Binding DesligarAR2Command}"/>
+
+            <Picker
+                    Grid.Row="3"
+                    Grid.ColumnSpan="18"
+                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+                <Picker.Items>
+                    <x:String>Selecione a Temperatura</x:String>
+                    <x:String>20ºC</x:String>
+                    <x:String>19ºC</x:String>
+                    <x:String>18ºC</x:String>
+                    <x:String>17ºC</x:String>
+                    <x:String>16ºC</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="CONFIRMA" 
+                    FontSize="Large"
+                    Command="{Binding ConfirmaTempAr2Command}"/>
+          
+            <Button Text="VOLTA" 
+                    FontSize="Large"
+                    Command="{Binding VoltaConfigGeralCommand}"/>
         </StackLayout>
     </ContentPage>
     <!--==================================================================================-->
     <ContentPage Title="AR-3" >
         <StackLayout>
-            <Label Text="Welcome to AR-3!"/>
+            <Label Text="Aplicar a todos!"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"/>
+
+            <Switch HorizontalOptions="Center"
+                    IsToggled="{Binding ApplyToAll}"/>
+            
+            <Button Text="LIGA" 
+                    FontSize="Large"
+                    Command="{Binding LigarAR3Command}"/>
+            
+            <Button Text="DESLIGA" 
+                    FontSize="Large"
+                    Command="{Binding DesligarAR3Command}"/>
+
+            <Picker
+                    Grid.Row="3"
+                    Grid.ColumnSpan="18"
+                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+                <Picker.Items>
+                    <x:String>Selecione a Temperatura</x:String>
+                    <x:String>20ºC</x:String>
+                    <x:String>19ºC</x:String>
+                    <x:String>18ºC</x:String>
+                    <x:String>17ºC</x:String>
+                    <x:String>16ºC</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="CONFIRMA" 
+                    FontSize="Large"
+                    Command="{Binding ConfirmaTempAr3Command}"/>
+          
+            <Button Text="VOLTA" 
+                    FontSize="Large"
+                    Command="{Binding VoltaConfigGeralCommand}"/>
         </StackLayout>
     </ContentPage>
     <!--==================================================================================-->
     <ContentPage Title="AR-4" >
-        <StackLayout>
-            <Label Text="Welcome to AR-4!"/>
+       <StackLayout>
+            <Label Text="Aplicar a todos!"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"/>
+
+            <Switch HorizontalOptions="Center"
+                    IsToggled="{Binding ApplyToAll}"/>
+            
+            <Button Text="LIGA" 
+                    FontSize="Large"
+                    Command="{Binding LigarAR4Command}"/>
+            
+            <Button Text="DESLIGA" 
+                    FontSize="Large"
+                    Command="{Binding DesligarAR4Command}"/>
+
+            <Picker
+                    Grid.Row="3"
+                    Grid.ColumnSpan="18"
+                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+                <Picker.Items>
+                    <x:String>Selecione a Temperatura</x:String>
+                    <x:String>20ºC</x:String>
+                    <x:String>19ºC</x:String>
+                    <x:String>18ºC</x:String>
+                    <x:String>17ºC</x:String>
+                    <x:String>16ºC</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="CONFIRMA" 
+                    FontSize="Large"
+                    Command="{Binding ConfirmaTempAr4Command}"/>
+          
+            <Button Text="VOLTA" 
+                    FontSize="Large"
+                    Command="{Binding VoltaConfigGeralCommand}"/>
         </StackLayout>
     </ContentPage>
     <!--==================================================================================-->

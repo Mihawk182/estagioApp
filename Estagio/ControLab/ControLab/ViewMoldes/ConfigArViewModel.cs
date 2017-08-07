@@ -60,6 +60,7 @@ namespace ControLab.ViewMoldes
                     ExecuteLigarAR2Command();
                     ExecuteLigarAR3Command();
                     ExecuteLigarAR4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -92,6 +93,7 @@ namespace ControLab.ViewMoldes
                     ExecuteLigarAR1Command();
                     ExecuteLigarAR3Command();
                     ExecuteLigarAR4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -124,6 +126,7 @@ namespace ControLab.ViewMoldes
                     ExecuteLigarAR1Command();
                     ExecuteLigarAR2Command();
                     ExecuteLigarAR4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -156,6 +159,7 @@ namespace ControLab.ViewMoldes
                     ExecuteLigarAR1Command();
                     ExecuteLigarAR2Command();
                     ExecuteLigarAR3Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -190,6 +194,7 @@ namespace ControLab.ViewMoldes
                     ExecuteDesligarAR2Command();
                     ExecuteDesligarAR3Command();
                     ExecuteDesligarAR4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -222,6 +227,7 @@ namespace ControLab.ViewMoldes
                     ExecuteDesligarAR1Command();
                     ExecuteDesligarAR3Command();
                     ExecuteDesligarAR4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -254,6 +260,7 @@ namespace ControLab.ViewMoldes
                     ExecuteDesligarAR1Command();
                     ExecuteDesligarAR2Command();
                     ExecuteDesligarAR4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -286,6 +293,7 @@ namespace ControLab.ViewMoldes
                     ExecuteDesligarAR1Command();
                     ExecuteDesligarAR2Command();
                     ExecuteDesligarAR3Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -384,6 +392,7 @@ namespace ControLab.ViewMoldes
                     ExecuteConfirmaTempAr2Command();
                     ExecuteConfirmaTempAr3Command();
                     ExecuteConfirmaTempAr4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -467,6 +476,7 @@ namespace ControLab.ViewMoldes
                     ExecuteConfirmaTempAr1Command();
                     ExecuteConfirmaTempAr3Command();
                     ExecuteConfirmaTempAr4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -550,6 +560,7 @@ namespace ControLab.ViewMoldes
                     ExecuteConfirmaTempAr1Command();
                     ExecuteConfirmaTempAr2Command();
                     ExecuteConfirmaTempAr4Command();
+                    ApplyToAll = true;
                 }
             }
         }
@@ -633,6 +644,7 @@ namespace ControLab.ViewMoldes
                     ExecuteConfirmaTempAr1Command();
                     ExecuteConfirmaTempAr2Command();
                     ExecuteConfirmaTempAr3Command();
+                    ApplyToAll = true;
                 }
             }
         }
