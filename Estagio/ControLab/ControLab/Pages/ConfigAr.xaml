@@ -7,27 +7,82 @@
 
     <!--==================================================================================-->
     <ContentPage Title="AR-1">
-        <StackLayout>
-          
-            <Label Text="Aplicar a todos!"
-                   FontSize="Medium"
-                   HorizontalOptions="Center"/>
+        <Grid
+            Padding="30,30,30,30"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="20">
 
-            <Switch HorizontalOptions="Center"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Grid.Row="0"
+                    Text="Aplicar a todos!"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"/>
+
+                <Switch 
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
                     IsToggled="{Binding ApplyToAll}"/>
-            
-            <Button Text="LIGA" 
-                    FontSize="Large"
-                    Command="{Binding LigarAR1Command}"/>
-            
-            <Button Text="DESLIGA" 
-                    FontSize="Large"
-                    Command="{Binding DesligarAR1Command}"/>
+            </Grid>
 
-            <Picker
-                    Grid.Row="3"
-                    Grid.ColumnSpan="18"
-                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+            <Grid 
+                Grid.Row="1">
+                
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Ligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding LigarAR1Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="2">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Desligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding DesligarAR1Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Picker 
+                Grid.Row="3"
+                SelectedIndex="{Binding TemperaturaSelectedEntry}">
 
                 <Picker.Items>
                     <x:String>Selecione a Temperatura</x:String>
@@ -39,39 +94,124 @@
                 </Picker.Items>
             </Picker>
 
-            <Button Text="CONFIRMA" 
-                    FontSize="Large"
-                    Command="{Binding ConfirmaTempAr1Command}"/>
-          
-            <Button Text="VOLTA" 
-                    FontSize="Large"
-                    Command="{Binding VoltaConfigGeralCommand}"/>
-            
-        </StackLayout>
+            <Grid 
+                Grid.Row="4">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Confirmar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding ConfirmaTempAr1Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="5">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Voltar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding VoltaConfigGeralCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
     </ContentPage>
     
     <!--==================================================================================-->
     <ContentPage Title="AR-2" >
-        <StackLayout>
-            <Label Text="Aplicar a todos!"
-                   FontSize="Medium"
-                   HorizontalOptions="Center"/>
+        <Grid
+            Padding="30,30,30,30"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="20">
 
-            <Switch HorizontalOptions="Center"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Grid.Row="0"
+                    Text="Aplicar a todos!"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"/>
+
+                <Switch 
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
                     IsToggled="{Binding ApplyToAll}"/>
-            
-            <Button Text="LIGA" 
-                    FontSize="Large"
-                    Command="{Binding LigarAR2Command}"/>
-            
-            <Button Text="DESLIGA" 
-                    FontSize="Large"
-                    Command="{Binding DesligarAR2Command}"/>
+            </Grid>
 
-            <Picker
-                    Grid.Row="3"
-                    Grid.ColumnSpan="18"
-                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+            <Grid 
+                Grid.Row="1">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Ligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding LigarAR2Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="2">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Desligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding DesligarAR2Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Picker 
+                Grid.Row="3"
+                SelectedIndex="{Binding TemperaturaSelectedEntry}">
 
                 <Picker.Items>
                     <x:String>Selecione a Temperatura</x:String>
@@ -83,37 +223,123 @@
                 </Picker.Items>
             </Picker>
 
-            <Button Text="CONFIRMA" 
-                    FontSize="Large"
-                    Command="{Binding ConfirmaTempAr2Command}"/>
-          
-            <Button Text="VOLTA" 
-                    FontSize="Large"
-                    Command="{Binding VoltaConfigGeralCommand}"/>
-        </StackLayout>
+            <Grid 
+                Grid.Row="4">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Confirmar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding ConfirmaTempAr2Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="5">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Voltar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding VoltaConfigGeralCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
     </ContentPage>
     <!--==================================================================================-->
     <ContentPage Title="AR-3" >
-        <StackLayout>
-            <Label Text="Aplicar a todos!"
-                   FontSize="Medium"
-                   HorizontalOptions="Center"/>
+        <Grid
+            Padding="30,30,30,30"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="20">
 
-            <Switch HorizontalOptions="Center"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Grid.Row="0"
+                    Text="Aplicar a todos!"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"/>
+
+                <Switch 
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
                     IsToggled="{Binding ApplyToAll}"/>
-            
-            <Button Text="LIGA" 
-                    FontSize="Large"
-                    Command="{Binding LigarAR3Command}"/>
-            
-            <Button Text="DESLIGA" 
-                    FontSize="Large"
-                    Command="{Binding DesligarAR3Command}"/>
+            </Grid>
 
-            <Picker
-                    Grid.Row="3"
-                    Grid.ColumnSpan="18"
-                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+            <Grid 
+                Grid.Row="1">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Ligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding LigarAR3Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="2">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Desligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding DesligarAR3Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Picker 
+                Grid.Row="3"
+                SelectedIndex="{Binding TemperaturaSelectedEntry}">
 
                 <Picker.Items>
                     <x:String>Selecione a Temperatura</x:String>
@@ -125,37 +351,123 @@
                 </Picker.Items>
             </Picker>
 
-            <Button Text="CONFIRMA" 
-                    FontSize="Large"
-                    Command="{Binding ConfirmaTempAr3Command}"/>
-          
-            <Button Text="VOLTA" 
-                    FontSize="Large"
-                    Command="{Binding VoltaConfigGeralCommand}"/>
-        </StackLayout>
+            <Grid 
+                Grid.Row="4">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Confirmar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding ConfirmaTempAr3Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="5">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Voltar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding VoltaConfigGeralCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
     </ContentPage>
     <!--==================================================================================-->
     <ContentPage Title="AR-4" >
-       <StackLayout>
-            <Label Text="Aplicar a todos!"
-                   FontSize="Medium"
-                   HorizontalOptions="Center"/>
+        <Grid
+            Padding="30,30,30,30"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="20">
 
-            <Switch HorizontalOptions="Center"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Grid.Row="0"
+                    Text="Aplicar a todos!"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"/>
+
+                <Switch 
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
                     IsToggled="{Binding ApplyToAll}"/>
-            
-            <Button Text="LIGA" 
-                    FontSize="Large"
-                    Command="{Binding LigarAR4Command}"/>
-            
-            <Button Text="DESLIGA" 
-                    FontSize="Large"
-                    Command="{Binding DesligarAR4Command}"/>
+            </Grid>
 
-            <Picker
-                    Grid.Row="3"
-                    Grid.ColumnSpan="18"
-                    SelectedIndex="{Binding TemperaturaSelectedEntry}">
+
+            <Grid 
+                Grid.Row="1">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Ligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding LigarAR4Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="2">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Desligar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding DesligarAR4Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Picker 
+                Grid.Row="3"
+                SelectedIndex="{Binding TemperaturaSelectedEntry}">
 
                 <Picker.Items>
                     <x:String>Selecione a Temperatura</x:String>
@@ -167,14 +479,44 @@
                 </Picker.Items>
             </Picker>
 
-            <Button Text="CONFIRMA" 
-                    FontSize="Large"
-                    Command="{Binding ConfirmaTempAr4Command}"/>
-          
-            <Button Text="VOLTA" 
-                    FontSize="Large"
-                    Command="{Binding VoltaConfigGeralCommand}"/>
-        </StackLayout>
+            <Grid 
+                Grid.Row="4">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Confirmar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding ConfirmaTempAr4Command}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <Grid 
+                Grid.Row="5">
+
+                <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                    <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Voltar"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Command="{Binding VoltaConfigGeralCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
     </ContentPage>
     <!--==================================================================================-->
 </TabbedPage>
