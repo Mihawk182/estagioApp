@@ -1945,7 +1945,7 @@ namespace ControLab.Droid
 			public const int abc_textfield_search_material = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int Cap_Logo = 2130837579;
+			public const int cap_Logo = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
 			public const int design_fab_background = 2130837580;

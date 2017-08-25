@@ -11,6 +11,7 @@ namespace ControLab.Pages
 		{
             BindingContext = new MainPageViewModel(Navigation);
             InitializeComponent();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
     }
 }
