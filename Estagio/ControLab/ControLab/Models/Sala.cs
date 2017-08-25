@@ -15,6 +15,8 @@ namespace ControLab.Models
 
         public string Nome { get; set; }
 
+        public string Apelido { get; set; }
+
         public int Qtd_Ar { get; set; }
 
         public int Qtd_Interruptores { get; set; }

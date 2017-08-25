@@ -13,8 +13,12 @@ namespace ControLab.ViewMoldes
     {
         public SelecaoLabViewModel(INavigation navigation) : base(navigation)
         {
-            Salas.Add(new Sala { Nome = "LAB 1" });
-            Salas.Add(new Sala { Nome = "LAB 2" });
+            Salas.Add(new Sala { Nome = "Laboratório de Hardware", Apelido = "Konrad Zuse"});
+            Salas.Add(new Sala { Nome = "Laboratório 1", Apelido = "Alan Turing" });
+            Salas.Add(new Sala { Nome = "Laboratório 2", Apelido = "Von Neumann" });
+            Salas.Add(new Sala { Nome = "Laboratório 3", Apelido = "Steve Jobs" });
+            Salas.Add(new Sala { Nome = "Laboratório 4", Apelido = "John Backus" });
+            Salas.Add(new Sala { Nome = "Laboratório 5", Apelido = "Donald Knuth" });
         }
 
         ObservableCollection<Sala> _Salas = new ObservableCollection<Sala>();
@@ -42,7 +46,7 @@ namespace ControLab.ViewMoldes
             if (!IsBusy)
             {
                 IsBusy = true;
-                if (value.Nome == "LAB 1")
+                if (value.Nome == "Laboratório de Hardware")
                 {
                     await Navigation.PushAsync(new ConfigGeral());
                 }

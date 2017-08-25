@@ -5,19 +5,71 @@
              x:Class="ControLab.Pages.SelecaoSalaLab"
              BackgroundColor="#FFFFF7">
     
-    <StackLayout
-               VerticalOptions="StartAndExpand"
-               HorizontalOptions="FillAndExpand">
+    <Grid
 
-        <Button Text="LABORATORIOS"
-                FontSize="Medium"
-                Command="{Binding AvancarLabCommand}"/>
+        Padding="30,30,30,30"
+        VerticalOptions="FillAndExpand"
+        RowSpacing="20">
 
-        <Button Text="SALAS"
-                FontSize="Medium"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0">
+            <Frame
+                Padding="0"
+                BackgroundColor="#444444">
+                <Label
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Text="Laboratórios"
+                    FontSize="Large"
+                    TextColor="#FFFFF7"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding AvancarLabCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+
+        <Grid
+            Grid.Row="1">
+            <Frame
+                Padding="0"
+                BackgroundColor="#444444">
+                <Label
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Text="Salas"
+                    FontSize="Large"
+                    TextColor="#FFFFF7"/>
+                <!--<Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding AvancarRecuperaCommand}"/>
+                </Frame.GestureRecognizers>-->
+            </Frame>
+        </Grid>
+
+        <Grid
+            Grid.Row="2">
+            <Frame
+                Padding="0"
+                BackgroundColor="#444444">
+                <Label
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Text="SAIR"
+                    FontSize="Large"
+                    TextColor="#FFFFF7"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding VoltaCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
         
-        <Button Text="SAIR"
-                Command="{Binding VoltaCommand}"/>
-        
-    </StackLayout>
+    </Grid>
 </ContentPage>

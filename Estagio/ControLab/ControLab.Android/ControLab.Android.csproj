@@ -17,7 +17,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -150,6 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\cap_Logo.png" />
+    <AndroidResource Include="Resources\Drawable\cap_Logo384.png" />
+    <AndroidResource Include="Resources\Drawable\cap_Logo676.png" />
     <Content Include="Resources\Drawable\ic_ac_unit_black_24dp.png" />
   </ItemGroup>
   <Import Project="..\ControLab\ControLab.projitems" Label="Shared" Condition="Exists('..\ControLab\ControLab.projitems')" />

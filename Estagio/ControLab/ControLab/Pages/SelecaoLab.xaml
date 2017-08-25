@@ -5,9 +5,6 @@
              x:Class="ControLab.Pages.SelecaoLab"
              BackgroundColor="#FFFFF7">
     
-    <StackLayout VerticalOptions="CenterAndExpand"
-                 HorizontalOptions="FillAndExpand">
-
         <ListView
 			HorizontalOptions="FillAndExpand"
 			VerticalOptions="FillAndExpand"
@@ -40,15 +37,15 @@
 							FontAttributes="Bold"
 							FontSize="Large"
 							Text="{Binding Nome}"/>
-                        </Grid>
+                        <Label 
+                            HorizontalOptions="StartAndExpand"
+                            Grid.Row="1"
+                            FontSize="Large"
+                            Text="{Binding Apelido}"/>
+                    </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        <Button Text="VOLTAR"
-                Command="{Binding VoltaLabCommand}"/>
-
-    </StackLayout>
     
 </ContentPage>

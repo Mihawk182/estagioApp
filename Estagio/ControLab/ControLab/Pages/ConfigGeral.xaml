@@ -5,62 +5,205 @@
              x:Class="ControLab.Pages.ConfigGeral"
              BackgroundColor="#FFFFF7">
     
-    <StackLayout>
-        <Button Text="Lamp I" 
-                FontSize="Micro"
-                Command="{Binding LigarLampadaICommand}"/>
+    <ScrollView>
+        <Grid
+            Padding="30,30,30,30"
+            VerticalOptions="FillAndExpand"
+            RowSpacing="20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                    Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+
+                <Grid
+                    Grid.Row="0"
+                    Grid.Column="0">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                        <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Lampada 1"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding LigarLampadaICommand}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+
+                <Grid
+                    Grid.Row="0"
+                    Grid.Column="1">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                        <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Lampada 2"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding LigarLampadaIICommand}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="0">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                        <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Lampada 3"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding LigarLampadaIIICommand}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
         
-        <Button Text="Lamp II" 
-                FontSize="Micro"
-                Command="{Binding LigarLampadaIICommand}"/>
-        
-        <Button Text="Lamp III" 
-                FontSize="Micro"
-                Command="{Binding LigarLampadaIIICommand}"/>
-        
-        <Button Text="ALamp IV" 
-                FontSize="Micro"
-                Command="{Binding LigarLampadaIVCommand}"/>
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#444444">
+                        <Label
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Text="Lampada 4"
+                            FontSize="Large"
+                            TextColor="#FFFFF7"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding LigarLampadaIVCommand}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </Grid>
+
+            <Grid
+                Grid.Row="1">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        x:Name="DisplayTemp" 
+                        Text="Temperatura: "
+                        FontSize="Large"/>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text = "{Binding TempEntryCommand, StringFormat= '{0} °C'}"
+                        FontSize="Large"/>
+
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        x:Name="TheUmid" 
+                        Text="Umidade: "
+                        FontSize="Large"/>
+
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        x:Name="DisplayUmid" 
+                        Text = "{Binding UmidEntryCommand, StringFormat= '{0} %'}"
+                        FontSize="Large"/>
+
+                </Grid>
+            </Grid>
+
+            <Grid
+                Grid.Row="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
 
 
-        <Label x:Name="DisplayTemp" 
-               Text="Temperatura"/>
+                <Label 
+                    Grid.Row="0"
+                    HorizontalOptions="Center"
+                    x:Name="TheLumi" 
+                    Text="Luminosidade:"
+                    FontSize="Large"/>
 
-        <Label
-            Text = "{Binding TempEntryCommand}"
-            FontSize="Micro"/>
+                <ProgressBar 
+                    Grid.Row="1"
+                    x:Name="LumiProgressBar"
+                    Progress="{Binding LumiProgressBarCommand}"
+                    WidthRequest="300"
+                    HeightRequest="20"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
 
+                <Frame
+                    Grid.Row="2"
+                    Padding="0"
+                    BackgroundColor="#444444">
+                    <Label
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Text="Ar"
+                        FontSize="Large"
+                        TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding AvancarConfigArCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
 
-        <Label x:Name="TheUmid" 
-               Text="Umidade"/>
-        
-        <Label x:Name="DisplayUmid" 
-               Text = "{Binding UmidEntryCommand}"/>
-        
-        <Label x:Name="TheLumi" Text="Luminosidade"/>
-
-        <ProgressBar x:Name="LumiProgressBar"
-                     Progress="{Binding LumiProgressBarCommand}"
-                     WidthRequest="300"
-                     HeightRequest="20"
-                     HorizontalOptions="Center"
-                     VerticalOptions="Center"/>
-
-        <!--<Button x:Name="BotaoSoma"
-            Text="Soma"
-            Command="{Binding Soma10 }"/>
-        
-        <Label x:Name="MostraSomaLabel"
-            Text = "{Binding MostraSoma10}"/>-->
-
-        <Button Text="AR" 
-                FontSize="Large"
-                Command="{Binding AvancarConfigArCommand}"/>
-
-        <Button Text="VOLTAR" 
-                FontSize="Micro" 
-                Command="{Binding VoltaSelecaoLabCommand}"/>
-
-    </StackLayout>
-    
+                <Frame
+                    Grid.Row="3"
+                    Padding="0"
+                    BackgroundColor="#444444">
+                    <Label
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Text="Voltar"
+                        FontSize="Large"
+                        TextColor="#FFFFF7"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding VoltaSelecaoLabCommand}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ScrollView>
 </ContentPage>
