@@ -44,7 +44,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Ligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -77,7 +77,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Ligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -110,7 +110,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Ligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -143,7 +143,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Ligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Ligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -178,7 +178,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Desligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -211,7 +211,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Desligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -244,7 +244,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Desligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -277,7 +277,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Desligar"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Desligar"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -327,7 +327,7 @@ namespace ControLab.ViewMoldes
 
                 if (TemperaturaSelectedEntry == 1)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Temp20C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Temp20C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -339,7 +339,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 2)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Temp19C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Temp19C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -351,7 +351,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 3)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Temp18C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Temp18C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -363,7 +363,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 4)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Temp17C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Temp17C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -375,7 +375,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 5)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar1Temp16C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar1Temp16C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -411,7 +411,7 @@ namespace ControLab.ViewMoldes
 
                 if (TemperaturaSelectedEntry == 1)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Temp20C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Temp20C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -423,7 +423,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 2)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Temp19C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Temp19C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -435,7 +435,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 3)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Temp18C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Temp18C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -447,7 +447,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 4)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Temp17C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Temp17C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -459,7 +459,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 5)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar2Temp16C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar2Temp16C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -495,7 +495,7 @@ namespace ControLab.ViewMoldes
 
                 if (TemperaturaSelectedEntry == 1)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Temp20C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Temp20C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -507,7 +507,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 2)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Temp19C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Temp19C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -519,7 +519,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 3)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Temp18C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Temp18C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -531,7 +531,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 4)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Temp17C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Temp17C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -543,7 +543,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 5)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar3Temp16C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar3Temp16C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -579,7 +579,7 @@ namespace ControLab.ViewMoldes
 
                 if (TemperaturaSelectedEntry == 1)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Temp20C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Temp20C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -591,7 +591,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 2)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Temp19C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Temp19C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -603,7 +603,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 3)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Temp18C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Temp18C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -615,7 +615,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 4)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Temp17C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Temp17C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 
@@ -627,7 +627,7 @@ namespace ControLab.ViewMoldes
                 }
                 else if (TemperaturaSelectedEntry == 5)
                 {
-                    var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Ar4Temp16C"));
+                    var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Ar4Temp16C"));
                     request.ContentType = "application/json";
                     request.Method = "POST";
 

@@ -71,7 +71,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request =  HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL1"));
+                var request =  HttpWebRequest.Create(string.Format(@"http://192.168.0.182/LigarL1"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -97,7 +97,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL2"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/LigarL2"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -123,7 +123,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL3"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/LigarL3"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -149,7 +149,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/LigarL4"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/LigarL4"));
                 request.ContentType = "application/json";
                 request.Method = "POST";
 
@@ -175,7 +175,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Temperatura"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Temperatura"));
                 request.ContentType = "application/json";
                 request.Method = "GET";
 
@@ -212,7 +212,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Umidade"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Umidade"));
                 request.ContentType = "application/json";
                 request.Method = "GET";
 
@@ -250,7 +250,7 @@ namespace ControLab.ViewMoldes
             {
                 IsBusy = true;
 
-                var request = HttpWebRequest.Create(string.Format(@"http://10.0.0.182/Luminosidade"));
+                var request = HttpWebRequest.Create(string.Format(@"http://192.168.0.182/Luminosidade"));
                 request.ContentType = "application/json";
                 request.Method = "GET";
 
